@@ -45,9 +45,10 @@ class ContainerBuilder extends StatelessWidget {
               child: const Text(
                 'Press This Button',
                 style: TextStyle(
-                    fontSize: 16,
-                    fontStyle: FontStyle.italic,
-                    color: Colors.white),
+                  fontSize: 16,
+                  fontStyle: FontStyle.italic,
+                  color: Colors.black,
+                ),
               ),
             ),
           ],

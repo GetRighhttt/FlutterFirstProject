@@ -8,9 +8,19 @@ import 'package:roll_dice_1/container_builder.dart';
 
 void main() {
   runApp(
-    const MaterialApp(
+    MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        useMaterial3: true,
+      ),
       home: Scaffold(
-        body: ContainerBuilder(
+        appBar: AppBar(
+          title: const Text(
+            'First Flutter App',
+          ),
+        ),
+        body: const ContainerBuilder(
           colors: [
             Color.fromARGB(255, 154, 218, 248),
             Color.fromARGB(255, 87, 169, 236),
