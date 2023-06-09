@@ -12,8 +12,8 @@ void main() {
       home: Scaffold(
         body: ContainerBuilder(
           colors: [
-            Colors.lightBlue,
-            Color.fromARGB(255, 55, 132, 196),
+            Color.fromARGB(255, 154, 218, 248),
+            Color.fromARGB(255, 87, 169, 236),
             Colors.blueGrey
           ],
         ),
