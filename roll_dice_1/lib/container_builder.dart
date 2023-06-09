@@ -35,8 +35,23 @@ class ContainerBuilder extends StatelessWidget {
           end: endAlignment,
         ),
       ),
-      child: const Center(
-        child: StyledText('What/s up Guys!'),
+      child: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const StyledText("What's up Guys!"),
+            ElevatedButton(
+              onPressed: () {},
+              child: const Text(
+                'Press This Button',
+                style: TextStyle(
+                    fontSize: 16,
+                    fontStyle: FontStyle.italic,
+                    color: Colors.white),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
