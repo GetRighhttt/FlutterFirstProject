@@ -12,6 +12,7 @@ void main() {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
+        primarySwatch: Colors.blue,
         useMaterial3: true,
       ),
       home: Scaffold(
