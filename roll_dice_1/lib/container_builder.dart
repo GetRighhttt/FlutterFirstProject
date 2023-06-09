@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:roll_dice_1/styled_text.dart';
 
 /// classes are how we create widgets in flutter and in OOP classes are
 /// basically templates/blueprints for containing and constructing objects
@@ -27,15 +28,7 @@ class ContainerBuilder extends StatelessWidget {
         ),
       ),
       child: const Center(
-        child: Text(
-          'Hey Bro! How are things going?',
-          textAlign: TextAlign.center,
-          style: TextStyle(
-              fontWeight: FontWeight.bold,
-              color: Colors.white,
-              fontSize: 24,
-              fontStyle: FontStyle.italic),
-        ),
+        child: StyledText(),
       ),
     );
   }
