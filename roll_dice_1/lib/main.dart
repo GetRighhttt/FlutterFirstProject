@@ -10,7 +10,13 @@ void main() {
   runApp(
     const MaterialApp(
       home: Scaffold(
-        body: ContainerBuilder(),
+        body: ContainerBuilder(
+          colors: [
+            Colors.lightBlue,
+            Color.fromARGB(255, 55, 132, 196),
+            Colors.blueGrey
+          ],
+        ),
       ),
     ),
   );

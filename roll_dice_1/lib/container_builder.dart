@@ -1,6 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:roll_dice_1/styled_text.dart';
 
+// constants (compile time contant that is locked in at the moment the code
+// is compiled)
+// 'final' could also be used however this is not recommended by flutter
+// used by dart for ahead of time compilation vs just in time compilation
+
+const startAlignment = Alignment.topCenter;
+const endAlignment = Alignment.bottomCenter;
+
 /// classes are how we create widgets in flutter and in OOP classes are
 /// basically templates/blueprints for containing and constructing objects
 /// objects are all about organizing data and separating data according to
@@ -8,7 +16,11 @@ import 'package:roll_dice_1/styled_text.dart';
 /// This is how we use or create custom widgets in Flutter
 class ContainerBuilder extends StatelessWidget {
   // constructor(necessary for flutter)
-  const ContainerBuilder({super.key});
+  // have to add required in front of the parameter because the named argument
+  // is optional by default and required makes it not optional
+  const ContainerBuilder({super.key, required this.colors});
+
+  final List<Color> colors;
 
   // necessary - this method returns a Widget and annotation override that
   // is expected by stateless widget class
@@ -18,17 +30,13 @@ class ContainerBuilder extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         gradient: LinearGradient(
-          colors: [
-            Colors.blue.shade100,
-            Colors.blue.shade200,
-            Colors.blue.shade300
-          ],
-          begin: Alignment.topCenter,
-          end: Alignment.bottomCenter,
+          colors: colors,
+          begin: startAlignment,
+          end: endAlignment,
         ),
       ),
       child: const Center(
-        child: StyledText(),
+        child: StyledText('What/s up Guys!'),
       ),
     );
   }
